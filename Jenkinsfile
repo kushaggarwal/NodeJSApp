@@ -5,12 +5,12 @@ pipeline{
     }
     environment{
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        APP_NAME = 'webapplication'
+        APP_NAME = 'webapp'
     }
     stages{
         stage('Build'){
             steps{
-                sh 'docker build -t kushaggarwal/$APP_NAME .'
+                sh 'docker build -t kijebor/$APP_NAME .'
             }
         }
         stage('Login'){
@@ -20,7 +20,7 @@ pipeline{
         }
         stage('Push'){
             steps{
-                sh 'docker push kushaggarwal/$APP_NAME'
+                sh 'docker push kijebor/$APP_NAME'
             }
         }
         stage('Monitor'){
