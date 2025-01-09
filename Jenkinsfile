@@ -5,8 +5,8 @@ pipeline{
     }
     environment{
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
-        APP_NAME = 'webapplication'
-        USER_NAME=''
+        APP_NAME = 'nodejsapplication'
+        USER_NAME='kushaggarwal'
     }
     stages{
         stage('Build'){
